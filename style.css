@@ -9,7 +9,22 @@ body {
 }
 
 #container {
+    display: flex;
+    flex-wrap: wrap;
     background-color: white;
-    height: 500px;
-    width: 500px;
+    height: 512px;
+    width: 512px;
+    padding: 0;
+}
+
+.box {
+    display: flex;
+    flex: 1 0 32px;
+    flex-wrap: wrap;
+    margin: 0px;
+    transition-duration: 0.25s;
+}
+
+.colored {
+    background-color: black;
 }
