@@ -7,8 +7,12 @@
         <title>Sketchpad</title>
     </head>
 
-    <body draggable="false">
-        <div id="container" draggable="false"></div>
-        <button id="clear" draggable="false">Clear Canvas</button>
+    <body>
+        <header></header>
+        <main id="main">
+            <div id="container"></div>
+            <button id="clear">Clear Canvas</button>
+            <input type="range" min="10" max="64" value="16" id="slider">
+        </main>
     </body>
 </html>
