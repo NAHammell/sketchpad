@@ -1,13 +1,21 @@
 const container = document.getElementById('container');
 const clearBtn = document.getElementById('clear');
 const slider = document.getElementById('slider');
+const defaultColor = 'black';
+const redBtn = document.getElementById('red');
+const sliderLabel = document.getElementById('gridsize');
 
 let canvasSize = 16;
+let color = defaultColor;
 
 slider.onchange = function () {
     canvasSize = this.value;
     container.innerHTML = '';
     generateSquares(canvasSize);
+}
+
+slider.onmousemove = function (e) {
+    sliderLabel.textContent = `${e.target.value} x ${e.target.value}`;
 }
 
 function generateSquares(size) {
@@ -16,9 +24,8 @@ function generateSquares(size) {
 
     for (i = 0; i < (size * size); i++) {
         let pixel = document.createElement('div');
-        pixel.style.transitionDuration = '0.25s';
         pixel.addEventListener('mouseover', function () {
-            pixel.style.backgroundColor = 'black';
+            pixel.style.backgroundColor = `${color}`;
         });
         container.appendChild(pixel);
     }
@@ -29,5 +36,15 @@ function removeColor() {
 }
 
 clearBtn.addEventListener('click', removeColor);
+let colorBtns = document.querySelectorAll('.colors');
+function addColors(nodeList) {
+    for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].addEventListener('click', function() {
+            color = nodeList[i].id;
+        });
+    }
+}
+
+addColors(colorBtns);
 
 generateSquares(canvasSize);

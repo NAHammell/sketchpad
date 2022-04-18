@@ -5,12 +5,14 @@ body, html {
 
 #main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex: 1;
     margin: 0 auto;
     height: 100%;
+    gap: 100px;
+    max-width: 1000px;
 }
 
 #container {
@@ -22,6 +24,43 @@ body, html {
     background-color: white;
 }
 
+#settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#settings > * {
+    margin-top: 24px;
+}
+
+#palette {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+}
+
+#sizeslider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+#gridsize {
+    padding: 0;
+    margin: 0;
+}
+
 .pixel {
     transition-duration: 0.25s;
+}
+
+.colors {
+    width: 20px;
+    height: 20px;
+    border: 0;
 }

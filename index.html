@@ -4,15 +4,36 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./style.css">
         <script src="./app.js" defer></script>
+
         <title>Sketchpad</title>
     </head>
 
     <body>
         <header></header>
+
         <main id="main">
+            <div id="settings">
+                <div id="palette">
+                    <button class="colors" id="red" style="background-color: red;"></button>
+                    <button class="colors" id="orange" style="background-color: orange;"></button>
+                    <button class="colors" id="yellow" style="background-color: yellow;"></button>
+                    <button class="colors" id="green" style="background-color: green;"></button>
+                    <button class="colors" id="blue" style="background-color: blue;"></button>
+                    <button class="colors" id="purple" style="background-color: purple;"></button>
+                    <button class="colors" id="white" style="background-color: white;"></button>
+                    <button class="colors" id="gray" style="background-color: gray;"></button>
+                    <button class="colors" id="black" style="background-color: black;"></button>
+                </div>
+
+                <button id="clear">Clear Canvas</button>
+                
+                <div id="sizeslider">
+                    <p id="gridsize">16 x 16</p>
+                    <input type="range" min="10" max="64" value="16" id="slider">
+                </div>
+            </div>
+
             <div id="container"></div>
-            <button id="clear">Clear Canvas</button>
-            <input type="range" min="10" max="64" value="16" id="slider">
         </main>
     </body>
 </html>
