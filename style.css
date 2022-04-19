@@ -1,6 +1,7 @@
 body, html {
     background-color: lightgray;
     height: 100vh;
+    font-family: Arial;
 }
 
 header {
@@ -51,12 +52,36 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0px;
+    gap: 4px;
+    font-size: 20px;
 }
 
 #gridsize {
     padding: 0;
     margin: 0;
+}
+
+#clear {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: gray;
+    color: lightgray;
+
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.18);
+
+    font-family: inherit;
+    font-size: 20px;
+
+    padding: 0.25em 0.75em;
+}
+
+#clear:hover {
+    background-color: rgba(128, 128, 128, 0.75);
+    color: rgba (211, 211, 211, 0.5);
 }
 
 .pixel {
@@ -67,4 +92,38 @@ header {
     width: 20px;
     height: 20px;
     border: 0;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 9rem;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: white;
+    height: 0.75rem;
+}
+
+input[type="range"]::-moz-range-track {
+    background: white;
+    height: 0.75rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: gray;
+    height: 0.75rem;
+    width: 0.75rem;
+}
+
+input[type="range"]::-moz-range-thumb {
+    border: none;
+    border-radius: 0;
+    background-color: gray;
+    height: 0.75rem;
+    width: 0.75rem;
 }
